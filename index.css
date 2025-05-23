@@ -1,15 +1,34 @@
 @import url(./fonts/inter/inter.css);
 @import url(./vendor/normalize.css);
 
+@property --colorMain {
+  syntax: '<color>';
+  initial-value: #131313;
+  inherits: false;
+}
+
+@property --colorBlue {
+  syntax: '<color>';
+  initial-value: #1452FF;
+  inherits: false;
+}
+
+@property --colorLight {
+  syntax: '<color>';
+  initial-value: #dbe5ff;
+  inherits: false;
+}
+
 .body {
   background-color: #FAFAFA;
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
-  color: #131313;
+  color: var(--colorMain);
 }
 
 .header {
   background-color: #FFFFFF;
+  margin-bottom: 82px;
 }
 
 .header__additional {
@@ -49,7 +68,7 @@
 }
 
 .header__link:hover {
-  color: #1452FF;
+  color: var(--colorBlue);
 }
 
 .header__link-divider {
@@ -105,7 +124,7 @@
 }
 
 .header__nav-button:hover {
-  border-bottom: 1px solid #1452FF;
+  border-bottom: 1px solid var(--colorBlue);
 }
 
 .header__button-text {
@@ -124,7 +143,7 @@
 }
 
 .header__nav-button:hover .header__button-arrow {
-  border-color: #131313;
+  border-color: var(--colorMain);
 }
 
 .header__button-list {
@@ -156,7 +175,7 @@
 }
 
 .header__button:hover {
-  background-color: #d9e3ff;
+  background-color: #E5ECFF;
 }
 
 .header__button svg {
@@ -166,5 +185,196 @@
 
 
 .header__button:hover svg {
-  fill: #1452FF;
+  fill: var(--colorBlue);
+}
+
+.main {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.introduction {
+  padding: 0 80px;
+  margin-bottom: 111px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #E0E0E0;
+  overflow: hidden;
+}
+
+.introduction__content {
+  width: 644px;
+  padding: 57px 0;
+}
+
+.introduction__name {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #B3B3B3;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.introduction__title {
+  font-size: 42px;
+  line-height: 1.25;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-size: 22px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.text:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.introduction__link-container {
+  display: flex;
+  align-items: center;
+  margin-top: 48px;
+}
+
+.introduction__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.introduction__link_type_button {
+  width: 383px;
+  height: 61px;
+  color: #FFFFFF;
+  background: linear-gradient(to right, var(--colorLight), var(--colorBlue), var(--colorLight));
+  border-radius: 1000px;
+  font-size: 18px;
+  line-height: 1.5;
+  transition: --colorLight .5s linear;
+  margin-right: 36px;
+}
+
+.introduction__link_type_button:hover {
+  --colorLight: #6f98ff;
+}
+
+.introduction__link_type_simple {
+  color: inherit;
+  font-size: 20px;
+  line-height: 1.5;
+  transition: color .5s linear;
+}
+
+.introduction__link_type_simple:hover {
+  color: var(--colorBlue);
+}
+
+.arrow-right {
+  width: 9px;
+  height: 9px;
+  border-color: var(--colorMain);
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  transform: rotate(-45deg);
+  margin-bottom: 2px;
+  margin-left: 15px;
+  transition: border-color .5s linear;
+}
+
+.introduction__link_type_simple:hover .arrow-right {
+  border-color: var(--colorBlue);
+}
+
+.introduction__animation-container {
+  width: 474px;
+  padding: 30px;
+  padding-bottom: 0;
+}
+
+.animation {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.sircle {
+  width: 102px;
+  height: 102px;
+  border-radius: 100%;
+  background-color: var(--colorBlue);
+  opacity: .7;
+  filter: blur(5px);
+  position: absolute;
+}
+
+.sircle_1 {
+  top: 0;
+  left: 0;
+}
+
+.sircle_2 {
+  top: 0;
+  left: 252px;
+}
+
+.sircle_3 {
+  top: 0;
+  right: 0;
+}
+
+.sircle_4 {
+  top: 126px;
+  left: 126px;
+}
+
+.sircle_5 {
+  top: 126px;
+  left: 252px;
+}
+
+.sircle_6 {
+  top: 126px;
+  right: 0;
+}
+
+.sircle_7 {
+  top: 252px;
+  left: 0;
+}
+
+.sircle_8 {
+  top: 252px;
+  left: 126px;
+}
+
+.sircle_9 {
+  top: 252px;
+  right: 0;
+}
+
+.line {
+  width: 102px;
+  border-top-left-radius: 1000px;
+  border-top-right-radius: 1000px;
+  background-color: var(--colorBlue);
+  filter: blur(5px);
+  opacity: .7;
+  position: absolute;
+}
+
+.line_1 {
+  height: 178px;
+  left: 126px;
+  bottom: -5px;
+}
+
+.line_2 {
+  height: 295px;
+  left: 252px;
+  bottom: -5px;
 }
