@@ -3,9 +3,93 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
     <title>Document</title>
   </head>
 
-  <body>
+  <body class="body">
+    <header class="header">
+      <div class="header__additional">
+        <nav class="header__additional-nav">
+          <ul class="header__additional-list">
+            <li class="header__additional-item">
+              <a href="#" class="header__link">Дополнительная информация</a>
+            </li>
+
+            <li class="header__additional-item">
+              <div class="header__link-divider"></div>
+            </li>
+
+            <li class="header__additional-item">
+              <a href="#" class="header__link">Противодействие коррупции</a>
+            </li>
+
+            <li class="header__additional-item">
+              <div class="header__link-divider"></div>
+            </li>
+
+            <li class="header__additional-item">
+              <a href="#" class="header__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header__main">
+        <div class="header__main-container">
+          <img src="./icons/logo.svg" alt="logo" class="header__logo" />
+  
+          <nav>
+            <ul class="header__main-list">
+              <li class="header__main-item">
+                <button class="header__nav-button">
+                  <span class="header__button-text">Сведения об организации</span>
+                  <div class="header__button-arrow"></div>
+                </button>
+              </li>
+  
+              <li class="header__main-item">
+                <button class="header__nav-button">
+                  <span class="header__button-text">Направления деятельности</span>
+                  <div class="header__button-arrow"></div>
+                </button>
+              </li>
+  
+              <li class="header__main-item">
+                <button class="header__nav-button">
+                  <span class="header__button-text">Деятельность организации</span>
+                  <div class="header__button-arrow"></div>
+                </button>
+              </li>
+  
+              <li class="header__main-item">
+                <button class="header__nav-button">
+                  <span class="header__button-text">Учреждения</span>
+                  <div class="header__button-arrow"></div>
+                </button>
+              </li>
+            </ul>
+          </nav>
+  
+          <ul class="header__button-list">
+            <li class="header__button-item">
+              <button class="header__button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.0564 23.436L13.682 15.0614C13.0154 15.6118 12.2487 16.0426 11.382 16.3537C10.5154 16.6648 9.61881 16.8204 8.69236 16.8204C6.41347 16.8204 4.48481 16.0314 2.90636 14.4534C1.32792 12.8754 0.538696 10.9471 0.538696 8.66869C0.538696 6.39046 1.3277 4.46158 2.9057 2.88202C4.4837 1.30269 6.41192 0.51302 8.69036 0.51302C10.9686 0.51302 12.8975 1.30224 14.477 2.88069C16.0564 4.45913 16.846 6.3878 16.846 8.66669C16.846 9.61891 16.6863 10.5284 16.3667 11.395C16.0469 12.2617 15.6204 13.0155 15.087 13.6564L23.4614 22.0307L22.0564 23.436ZM8.69236 14.8207C10.4104 14.8207 11.8655 14.2245 13.0577 13.032C14.2501 11.8398 14.8464 10.3847 14.8464 8.66669C14.8464 6.94869 14.2501 5.49357 13.0577 4.30135C11.8655 3.10891 10.4104 2.51269 8.69236 2.51269C6.97436 2.51269 5.51925 3.10891 4.32703 4.30135C3.13459 5.49357 2.53836 6.94869 2.53836 8.66669C2.53836 10.3847 3.13459 11.8398 4.32703 13.032C5.51925 14.2245 6.97436 14.8207 8.69236 14.8207Z" />
+                </svg>
+              </button>
+            </li>
+  
+            <li class="header__button-item">
+              <button class="header__button">
+                <svg width="28" height="19" viewBox="0 0 28 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.0031 14.7693C15.5139 14.7693 16.7972 14.2406 17.8527 13.183C18.9083 12.1254 19.4361 10.8412 19.4361 9.33033C19.4361 7.81945 18.9073 6.53622 17.8497 5.48067C16.7922 4.42511 15.5079 3.89733 13.9971 3.89733C12.4862 3.89733 11.2029 4.42611 10.1474 5.48367C9.09184 6.54122 8.56406 7.82544 8.56406 9.33633C8.56406 10.8472 9.09284 12.1304 10.1504 13.186C11.2079 14.2416 12.4922 14.7693 14.0031 14.7693ZM14.0001 12.9333C13.0001 12.9333 12.1501 12.5833 11.4501 11.8833C10.7501 11.1833 10.4001 10.3333 10.4001 9.33333C10.4001 8.33333 10.7501 7.48333 11.4501 6.78333C12.1501 6.08333 13.0001 5.73333 14.0001 5.73333C15.0001 5.73333 15.8501 6.08333 16.5501 6.78333C17.2501 7.48333 17.6001 8.33333 17.6001 9.33333C17.6001 10.3333 17.2501 11.1833 16.5501 11.8833C15.8501 12.5833 15.0001 12.9333 14.0001 12.9333ZM14.0017 18.6667C10.9357 18.6667 8.14206 17.8209 5.62073 16.1293C3.09939 14.438 1.24295 12.1727 0.0513916 9.33333C1.24295 6.494 3.09872 4.22867 5.61872 2.53733C8.13895 0.845778 10.9322 0 13.9984 0C17.0644 0 19.8581 0.845778 22.3794 2.53733C24.9007 4.22867 26.7572 6.494 27.9487 9.33333C26.7572 12.1727 24.9014 14.438 22.3814 16.1293C19.8612 17.8209 17.0679 18.6667 14.0017 18.6667ZM14.0001 16.6667C16.5112 16.6667 18.8167 16.0056 20.9167 14.6833C23.0167 13.3611 24.6223 11.5778 25.7334 9.33333C24.6223 7.08889 23.0167 5.30556 20.9167 3.98333C18.8167 2.66111 16.5112 2 14.0001 2C11.4889 2 9.18339 2.66111 7.08339 3.98333C4.98339 5.30556 3.37784 7.08889 2.26673 9.33333C3.37784 11.5778 4.98339 13.3611 7.08339 14.6833C9.18339 16.0056 11.4889 16.6667 14.0001 16.6667Z" />
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
   </body>
 </html>
