@@ -803,6 +803,10 @@ a {
   outline: none;
 }
 
+.feedback__input:focus {
+  border-color: var(--colorBlue);
+}
+
 .feedback__input_name {
   width: 40%;
   margin-right: 16px;
@@ -825,6 +829,10 @@ a {
   border: 1px solid var(--borderColor);
   border-radius: 12px;
   outline: none;
+}
+
+.feedback__textarea:focus {
+  border-color: var(--colorBlue);
 }
 
 .feedback__textarea::placeholder {
@@ -860,4 +868,100 @@ a {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: -0.05rem;
+}
+
+.questions {
+  margin-bottom: 120px;
+}
+
+.questions__text-container {
+  max-width: 720px;
+  margin-bottom: 48px;
+}
+
+.questions__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.questions__item {
+  margin-bottom: 16px;
+}
+
+.questions__item:last-child {
+  margin-bottom: 0;
+}
+
+.questions__button {
+  background-color: #FFFFFF;
+  border: 1px solid var(--borderColor);
+  border-radius: 12px;
+  height: 72px;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: block;
+  padding: 20px 24px;
+  cursor: pointer;
+  transition: border-color .5s linear;
+}
+
+.questions__button:hover {
+  border-color: var(--colorGray);
+}
+
+.questions__button_opened {
+  height: fit-content;
+}
+
+.questions__title-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.questions__item-title {
+  width: calc(100% - 72px);
+  margin: 0;
+  margin-right: 24px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5;
+  letter-spacing: -0.05rem;
+  text-align: left;
+  overflow: hidden;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.questions__button_opened .questions__item-title  {
+  overflow: visible;
+  text-wrap: wrap;
+  white-space: wrap;
+  text-overflow: unset;
+}
+
+.questions__item svg {
+  fill: var(--colorGray);
+  transition: fill .5s linear;
+}
+
+.questions__item:hover svg {
+  fill: #666666;
+}
+
+.questions__button_opened svg  {
+  transform: rotate(45deg);
+}
+
+.questions__item-text {
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: -0.05rem;
+  text-align: left;
+  margin: 0;
 }
