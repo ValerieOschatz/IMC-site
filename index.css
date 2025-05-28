@@ -37,6 +37,12 @@
   inherits: false;
 }
 
+@property --colorDarkGray {
+  syntax: '<color>';
+  initial-value: #666666;
+  inherits: false;
+}
+
 a {
   color: var(--colorBlue);
 }
@@ -951,7 +957,7 @@ a {
 }
 
 .questions__item:hover svg {
-  fill: #666666;
+  fill: var(--colorDarkGray);
 }
 
 .questions__button_opened svg  {
@@ -1137,4 +1143,126 @@ a {
 
 .contacts__map-link_2gis {
   background-image: url(./icons/_2gis__\ 1.svg);
+}
+
+.footer {
+  max-width: 1440px;
+  width: calc(100% - 2*80px);
+  margin: 0 auto;
+  border-top: 1px solid var(--borderColor);
+}
+
+.footer__nav {
+  display: flex;
+  margin-top: 36px;
+  margin-bottom: 70px;
+}
+
+.footer__nav-container {
+  display: flex;
+  margin-right: 10px;
+}
+
+.footer__nav-container:last-child {
+  margin-right: 0;
+}
+
+.footer__nav-column {
+  min-width: 230px;
+  margin-right: 10px;
+}
+
+.footer__nav-column:last-child {
+  margin-right: 0;
+}
+
+.footer__title {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5;
+  letter-spacing: -0.05rem;
+  margin: 0;
+}
+
+.footer__link-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 24px;
+}
+
+.footer__link-list_btns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__link-item {
+  margin-bottom: 24px;
+}
+
+.footer__link-item:last-child {
+  margin-bottom: 0;
+}
+
+.footer__link-item_btn {
+  margin-right: 16px;
+}
+
+.footer__nav-link {
+  text-decoration: none;
+  color: var(--colorDarkGray);
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.05rem;
+}
+
+.footer__text {
+  color: var(--colorDarkGray);
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.05rem;
+}
+
+.footer__text_highlighted {
+  color: var(--colorBlue);
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.05rem;
+}
+
+.footer__image-link-image {
+  width: 230px;
+  display: block;
+}
+
+.footer__additional {
+  border-top: 1px solid var(--borderColor);
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__additional-text {
+  font-size: 16px;
+  line-height: 1.14;
+  letter-spacing: -0.05rem;
+  color: var(--colorDarkGray);
+  text-decoration: none;
+}
+
+.footer__additional-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer__item {
+  margin-right: 10px;
+}
+
+.footer__item:last-child {
+  margin-right: 0;
 }
