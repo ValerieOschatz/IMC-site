@@ -1018,3 +1018,123 @@ a {
   z-index: 1;
   margin-top: -34px;
 }
+
+.contacts {
+  margin-bottom: 120px;
+}
+
+.contacts__text-container {
+  max-width: 645px;
+  margin-bottom: 48px;
+}
+
+.contacts__content {
+  display: flex;
+}
+
+.contacts__map {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.contacts__info {
+  width: 431px;
+  margin-left: 20px;
+  flex-shrink: 0;
+}
+
+.contacts__info-item {
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--borderColor);
+}
+
+.contacts__info-item:last-child {
+  border: none;
+}
+
+.contacts__address-container {
+  margin-bottom: 24px;
+}
+
+.contacts__info-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: -0.05rem;
+  margin: 0;
+}
+
+.contacts__address {
+  font-size: 14px;
+  letter-spacing: -0.05rem;
+  margin: 0;
+  margin-top: 2px;
+}
+
+.contacts__phone {
+  font-size: 22px;
+  line-height: 1.5;
+  letter-spacing: -0.05rem;
+  margin: 0;
+  margin-top: 8px;
+}
+
+.contacts__schedule-title {
+  position: relative;
+  width: fit-content;
+}
+
+.contacts__dot {
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(197.1deg, rgba(35, 199, 35, 0.5) 4.52%, rgba(29, 149, 29, 0.5) 88.24%);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: -14px;
+}
+
+.contacts__schedule {
+  margin: 24px 0;
+}
+
+.contacts__schedule-item {
+  margin-bottom: 16px;
+}
+
+.contacts__schedule-item:last-child {
+  margin-bottom: 0;
+}
+
+.contacts__schedule-text {
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: -0.05rem;
+  margin: 0;
+}
+
+.contacts__maps {
+  display: flex;
+  margin-top: 20px;
+}
+
+.contacts__map-link {
+  width: 36px;
+  height: 36px;
+  display: block;
+  background-size: contain;
+  background-position: center;
+  margin-right: 16px;
+}
+
+.contacts__map-link:last-child {
+  margin-right: 0;
+}
+
+.contacts__map-link_yandex {
+  background-image: url(./icons/Yandex_Maps_icon\ 1.svg);
+}
+
+.contacts__map-link_2gis {
+  background-image: url(./icons/_2gis__\ 1.svg);
+}
