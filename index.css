@@ -68,7 +68,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 100;
 }
 
 .header__additional {
@@ -170,6 +170,10 @@ a {
   border-bottom: 1px solid var(--colorBlue);
 }
 
+.header__nav-button_opened {
+  border-bottom: 2px solid var(--colorBlue);
+}
+
 .header__button-text {
   margin-right: 10px;
 }
@@ -182,7 +186,13 @@ a {
   border-color: #D9D9D9;
   transform: rotate(-45deg);
   margin-bottom: 8px;
-  transition: border-color .5s linear;
+  transition: all .5s linear;
+}
+
+.header__nav-button_opened .header__button-arrow {
+  transform: rotate(135deg);
+  margin-bottom: 0;
+  margin-top: 8px;
 }
 
 .header__nav-button:hover .header__button-arrow {
@@ -1292,6 +1302,101 @@ a {
   margin-right: 0;
 }
 
+.header-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background: #00000033;
+  backdrop-filter: blur(70px);
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility .3s, opacity 0.3s ease-in;
+}
+
+.header-modal_opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+.header-modal__container {
+  width: fit-content;
+  box-sizing: border-box;
+  padding: 24px;
+  margin: 0 auto;
+  margin-top: 130px;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+}
+
+.header-modal__content {
+  display: flex;
+}
+
+.header-modal__list {
+  width: 311px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 16.5px;
+  box-sizing: border-box;
+  border-right: 1px solid var(--borderColor);
+}
+
+.header-modal__list:last-child {
+  border: none;
+}
+
+.header-modal__title {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.125;
+  letter-spacing: -0.04rem;
+  color: var(--colorGray);
+  margin: 12px 0 28px;
+  text-align: center;
+}
+
+.header-modal__item {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.header-modal__item svg {
+  fill: #1C1B1F;
+  margin-right: 10px;
+  transition: fill .5s linear;
+}
+
+.header-modal__item:last-child {
+  margin-bottom: 0;
+}
+
+.header-modal__link {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.header-modal__text {
+  font-size: 16px;
+  line-height: 1.125;
+  letter-spacing: -0.04rem;
+  transition: color .5s linear;
+}
+
+.header-modal__item:hover svg {
+  fill: var(--colorBlue);
+}
+
+.header-modal__item:hover .header-modal__text {
+  color: var(--colorBlue);
+}
+
 @media screen and (max-width: 1439px) {
   .header__additional-nav {
     width: calc(100% - 2 * 48px);
@@ -1625,6 +1730,10 @@ a {
 
   .footer__additional-text {
     font-size: 12px;
+  }
+
+  .header-modal {
+    display: none;
   }
 }
 
