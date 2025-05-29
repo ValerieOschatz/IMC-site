@@ -55,13 +55,20 @@ a {
   overflow-x: hidden;
 }
 
+.section {
+  max-width: 1440px;
+  width: calc(100% - 2*80px);
+  margin: 0 auto;
+  margin-bottom: 120px;
+}
+
 .header {
   background-color: #FFFFFF;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 10;
 }
 
 .header__additional {
@@ -224,23 +231,33 @@ a {
   fill: var(--colorBlue);
 }
 
+.header__burger-button {
+  background-color: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  background-image: url(./icons/menu.svg);
+  cursor: pointer;
+  display: none;
+}
+
 .main {
-  max-width: 1440px;
-  width: calc(100% - 2*80px);
-  margin: 0 auto;
   margin-top: 182px;
 }
 
 .introduction {
-  margin-bottom: 111px;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid var(--borderColor);
   overflow: hidden;
+  max-width: 1440px;
+  width: calc(100% - 2*80px);
+  margin: 0 auto;
+  margin-bottom: 100px;
 }
 
 .introduction__content {
-  width: 644px;
+  max-width: 644px;
   padding: 57px 0;
 }
 
@@ -279,6 +296,7 @@ a {
 }
 
 .introduction__link {
+  height: 61px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -287,7 +305,6 @@ a {
 
 .introduction__link_type_button {
   width: 383px;
-  height: 61px;
   color: #FFFFFF;
   background: linear-gradient(to right, var(--colorLight), var(--colorBlue), var(--colorLight));
   border-radius: 1000px;
@@ -332,6 +349,8 @@ a {
   width: 474px;
   padding: 30px;
   padding-bottom: 0;
+  padding-right: 10px;
+  flex-shrink: 0;
 }
 
 .animation {
@@ -417,10 +436,6 @@ a {
   bottom: -5px;
 }
 
-.news {
-  margin-bottom: 120px;
-}
-
 .news__top-container {
   margin-bottom: 48px;
   display: flex;
@@ -428,7 +443,7 @@ a {
 }
 
 .news__text-container {
-  width: 660px;
+  max-width: 660px;
 }
 
 .section-title {
@@ -584,13 +599,11 @@ a {
 .coops {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 120px;
 }
 
 .coops__text-container {
-  width: 588px;
-  flex-shrink: 0;
-  margin-right: 140px;
+  max-width: 588px;
+  margin-right: 60px;
 }
 
 .coops__tabs {
@@ -604,15 +617,18 @@ a {
   background-color: #FFFFFF;
   border: 1px solid var(--borderColor);
   border-radius: 48px;
+  box-sizing: border-box;
+  height: 62px;
 }
 
 .coops__tab-button {
   background: transparent;
   border: none;
   border-radius: 1000px;
-  padding: 17px 24px;
+  padding: 0 24px;
   font-size: 16px;
   cursor: pointer;
+  height: 46px;
 }
 
 .coops__tab-button_active {
@@ -625,7 +641,7 @@ a {
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
   gap: 20px;
 }
 
@@ -675,6 +691,7 @@ a {
 
 .coops__link-image {
   z-index: 1;
+  height: 40%;
 }
 
 .coops__link-text {
@@ -684,6 +701,7 @@ a {
   line-height: 1.2;
   text-align: center;
   transition: color .5s linear;
+  z-index: 2;
 }
 
 .coops__link:hover .coops__link-bg {
@@ -695,10 +713,6 @@ a {
 
 .coops__link:hover .coops__link-text {
   color: var(--colorBlue);
-}
-
-.prof {
-  margin-bottom: 120px;
 }
 
 .prof__text-container {
@@ -780,7 +794,6 @@ a {
 
 .feedback {
   display: flex;
-  margin-bottom: 120px;
 }
 
 .feedback__text-container {
@@ -874,10 +887,6 @@ a {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: -0.05rem;
-}
-
-.questions {
-  margin-bottom: 120px;
 }
 
 .questions__text-container {
@@ -1023,10 +1032,6 @@ a {
 .button_resources {
   z-index: 1;
   margin-top: -34px;
-}
-
-.contacts {
-  margin-bottom: 120px;
 }
 
 .contacts__text-container {
@@ -1265,4 +1270,324 @@ a {
 
 .footer__item:last-child {
   margin-right: 0;
+}
+
+@media screen and (max-width: 1439px) {
+  .header__additional-nav {
+    width: calc(100% - 2 * 48px);
+  }
+
+  .header__main-container {
+    width: calc(100% - 2 * 48px);
+  }
+
+  .header__main-item {
+    margin-right: 10px;
+  }
+
+  .introduction__animation-container {
+    width: 284px;
+    height: 330px;
+    align-self: flex-end;
+  }
+
+  .sircle {
+    width: 58px;
+    height: 58px;
+  }
+
+  .sircle_2 {
+    left: 150.6px;
+  }
+
+  .sircle_4 {
+    top: 75.3px;
+    left: 75.3px;
+  }
+
+  .sircle_5 {
+    top: 75.3px;
+    left: 150.6px;
+  }
+
+  .sircle_6 {
+    top: 75.3px;
+  }
+
+  .sircle_7 {
+    top: 150.6px;
+  }
+
+  .sircle_8 {
+    top: 150.6px;
+    left: 75.3px;
+  }
+
+  .sircle_9 {
+    top: 150.6px;
+  }
+
+  .line {
+    width: 58px;
+  }
+
+  .line_1 {
+    height: 116px;
+    left: 75.3px;
+  }
+
+  .line_2 {
+    height: 184px;
+    left: 150.6px;
+  }
+
+  .main {
+    margin-top: 140px;
+  }
+
+  .section {
+    width: calc(100% - 2 * 48px);
+  }
+
+  .introduction {
+    width: calc(100% - 2 * 48px);
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .introduction__link-container {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .introduction__link_type_button {
+    margin-right: 0;
+  }
+
+  .introduction__link_type_simple {
+    margin-bottom: 24px;
+  }
+
+  .introduction__name {
+    font-size: 18px;
+  }
+
+  .introduction__title {
+    font-size: 32px;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+
+  .section-title {
+    font-size: 40px;
+  }
+
+  .coops__grid {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .header__additional {
+    display: none;
+  }
+
+  .header__main-container {
+    padding: 20px 0;
+    box-sizing: border-box;
+  }
+
+  .header__main-list {
+    display: none;
+  }
+
+  .header__button-list {
+    display: none;
+  }
+
+  .header__burger-button {
+    display: block;
+  }
+
+  .main {
+    margin-top: 70px;
+  }
+
+  .introduction {
+    margin-bottom: 86px;
+  }
+
+  .introduction__content {
+    padding: 36px 0;
+  }
+
+  .introduction__name {
+    font-size: 16px;
+  }
+
+  .introduction__title {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+
+  .introduction__link-container {
+    margin-top: 30px;
+  }
+
+  .introduction__link {
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .introduction__link_type_button {
+    width: 283px;
+  }
+
+  .section-title {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .news__top-container {
+    margin-bottom: 30px;
+  }
+
+  .news__button-container {
+    display: none;
+  }
+
+  .news__item-title {
+    font-size: 20px;
+  }
+
+  .news__item-text {
+    font-size: 16px;
+  }
+
+  .news__list {
+    overflow-y: scroll;
+  }
+
+  .news__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .section {
+    margin-bottom: 86px;
+  }
+
+  .coops {
+    flex-direction: column;
+  }
+
+  .coops__text-container {
+    margin-right: 0;
+    margin-bottom: 36px;
+  }
+
+  .coops__grid {
+    grid-template-columns: repeat(auto-fit, minmax(161px, 1fr));
+  }
+
+  .coops__grid-item {
+    height: 171px;
+  }
+
+  .coops__image-container {
+    height: 120px;
+  }
+
+  .coops__link-bg {
+    width: 130px;
+    height: 130px;
+    filter: blur(40px);
+    top: -50px;
+  }
+
+.coops__link:hover .coops__link-bg {
+  width: 160px;
+  height: 160px;
+  filter: blur(40px);
+  top: -60px;
+}
+}
+
+@media screen and (max-width: 767px) {
+  .header__additional-nav {
+    width: calc(100% - 2 * 16px);
+  }
+
+  .header__main-container {
+    width: calc(100% - 2 * 16px);
+  }
+
+  .introduction {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    width: calc(100% - 2 * 16px);
+  }
+
+  .introduction__title {
+    font-size: 20px;
+  }
+
+  .introduction__animation-container {
+    align-self: unset;
+    padding: 0;
+  }
+
+  .news__item {
+    width: 250px;
+    height: 396px;
+  }
+
+  .news__link {
+    width: 250px;
+    height: 396px;
+  }
+
+  .news__image {
+    width: 250px;
+    height: 150px;
+  }
+
+  .news__item-text-container {
+    margin: 10px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+
+  .introduction__link-container {
+    margin-top: 10px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section {
+    width: calc(100% - 2 * 16px);
+    margin-bottom: 60px;
+  }
+
+  .coops__tabs {
+    overflow-x: auto;
+  }
+
+  .coops__tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .coops__tab-button {
+    padding: 0 10px;
+  }
 }
