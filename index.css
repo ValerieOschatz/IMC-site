@@ -1687,8 +1687,7 @@ a {
 
   .header__item-inner {
     padding: 0 48px;
-    border-bottom: 1px solid var(--borderColor);
-    display: none;
+    border: none;
     height: 0;
     opacity: 0;
     visibility: hidden;
@@ -1697,10 +1696,14 @@ a {
   }
 
   .header__item-inner_opened {
-    display: block;
     height: fit-content;
     opacity: 1;
     visibility: visible;
+    border-bottom: 1px solid var(--borderColor);
+  }
+
+  .header__nav-button_opened .header__button-arrow {
+    transform: rotate(135deg);
   }
 
   .header-modal__list {
