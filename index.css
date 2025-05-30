@@ -55,6 +55,10 @@ a {
   overflow-x: hidden;
 }
 
+.scroll-disabled {
+  overflow: hidden;
+}
+
 .section {
   max-width: 1440px;
   width: calc(100% - 2*80px);
@@ -1603,7 +1607,7 @@ a {
   }
 
   .header_opened {
-    height: 100vh;
+    min-height: 100vh;
   }
 
   .header_opened .header__main {
@@ -1613,7 +1617,7 @@ a {
   }
 
   .header__mobile-menu {
-    height: 0;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1623,12 +1627,18 @@ a {
   }
 
   .header_opened .header__mobile-menu {
-    height: 100%;
+    top: 73px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow: auto;
     visibility: visible;
     opacity: 1;
   }
 
   .header__mobile-menu .header__main-list {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -1650,6 +1660,7 @@ a {
     margin-bottom: 0;
     text-decoration: none;
     color: inherit;
+    box-sizing: border-box;
   }
 
   .header__nav-button:hover {
@@ -1672,6 +1683,51 @@ a {
     line-height: 1.5;
     letter-spacing: -0.05rem;
     color: var(--colorDarkGray);
+  }
+
+  .header__item-inner {
+    padding: 0 48px;
+    border-bottom: 1px solid var(--borderColor);
+    display: none;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+  }
+
+  .header__item-inner_opened {
+    display: block;
+    height: fit-content;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header-modal__list {
+    width: 100%;
+    border: none;
+    padding: 0;
+  }
+
+  .header-modal__item {
+    width: 50%;
+  }
+
+  .header-modal__title {
+    margin: 20px 0;
+  }
+
+  .header-modal__flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .header-modal__item:hover svg {
+    fill: inherit;
+  }
+
+  .header-modal__item:hover .header-modal__text {
+    color: inherit;
   }
 
   .main {
@@ -1845,6 +1901,14 @@ a {
     height: 70px;
     padding: 0 16px;
     font-size: 16px;
+  }
+
+  .header__item-inner {
+    padding: 0 16px;
+  }
+
+  .header-modal__item {
+    width: 100%;
   }
 
   .header__mobile-footer {
