@@ -5,6 +5,10 @@ const headerMenuListMobile = header.querySelector('.header__main-list_mobile');
 const headerModal = body.querySelector('.header-modal');
 const burgerButton = header.querySelector('.header__mobile-button_type_burger');
 const crossButton = header.querySelector('.header__mobile-button_type_close');
+const searchButton = header.querySelector('.header__button_search');
+const closeEearchButton = header.querySelector('.header__button_close-search');
+const searchModal = body.querySelector('.search-modal');
+const headerButtonList = header.querySelector('.header__button-list');
 
 const clickHeaderMenu = (evt) => {
   if (window.innerWidth < 1024) return;
@@ -30,6 +34,7 @@ const clickHeaderMenu = (evt) => {
 
 const closeHeaderMenuOverlay = (evt) => {
   if (window.innerWidth < 1024) return;
+  if (evt.target.closest('.header-modal__container')) return;
   const openedMenu = document.querySelector('.header__nav-button_opened');
   if (!openedMenu || evt.target.closest('.header__nav-button')) return;
   openedMenu.classList.remove('header__nav-button_opened');
@@ -69,8 +74,27 @@ const closeMobileMenu = () => {
   body.classList.remove('scroll-disabled');
 }
 
+const openSearch = () => {
+  searchModal.classList.add('search-modal_opened');
+  headerButtonList.classList.add('header__button-list_opened-search');
+}
+
+const closeSearch = () => {
+  searchModal.classList.remove('search-modal_opened');
+  headerButtonList.classList.remove('header__button-list_opened-search');
+}
+
+const closeSearchOverlay = (evt) => {
+  if (evt.target.closest('.search-modal__container') || evt.target.closest('.header__button_search')) return;
+  searchModal.classList.remove('search-modal_opened');
+  headerButtonList.classList.remove('header__button-list_opened-search');
+}
+
 headerMenuList.addEventListener('click', clickHeaderMenu);
 headerMenuListMobile.addEventListener('click', toggleInnerMenu);
 document.addEventListener('click', closeHeaderMenuOverlay);
 burgerButton.addEventListener('click', openMobileMenu);
 crossButton.addEventListener('click', closeMobileMenu);
+searchButton.addEventListener('click', openSearch);
+closeEearchButton.addEventListener('click', closeSearch);
+document.addEventListener('click', closeSearchOverlay);
