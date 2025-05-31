@@ -9,6 +9,8 @@ const searchButton = header.querySelector('.header__button_search');
 const closeEearchButton = header.querySelector('.header__button_close-search');
 const searchModal = body.querySelector('.search-modal');
 const headerButtonList = header.querySelector('.header__button-list');
+const tabList = body.querySelector('.coops__tabs');
+const questionList = body.querySelector('.questions__list');
 
 const clickHeaderMenu = (evt) => {
   if (window.innerWidth < 1024) return;
@@ -90,6 +92,24 @@ const closeSearchOverlay = (evt) => {
   headerButtonList.classList.remove('header__button-list_opened-search');
 }
 
+const setTab = (evt) => {
+  const tab = evt.target.closest('.coops__tab-button');
+
+  if (tab && !tab.classList.contains('coops__tab-button_active')) {
+    const activeTab = tabList.querySelector('.coops__tab-button_active');
+    activeTab.classList.remove('coops__tab-button_active');
+    tab.classList.add('coops__tab-button_active');
+  }
+}
+
+const toggleQuestion = (evt) => {
+  const button = evt.target.closest('.questions__button');
+
+  if (button) {
+    button.classList.toggle('questions__button_opened');
+  }
+}
+
 headerMenuList.addEventListener('click', clickHeaderMenu);
 headerMenuListMobile.addEventListener('click', toggleInnerMenu);
 document.addEventListener('click', closeHeaderMenuOverlay);
@@ -98,3 +118,5 @@ crossButton.addEventListener('click', closeMobileMenu);
 searchButton.addEventListener('click', openSearch);
 closeEearchButton.addEventListener('click', closeSearch);
 document.addEventListener('click', closeSearchOverlay);
+tabList.addEventListener('click', setTab);
+questionList.addEventListener('click', toggleQuestion);
